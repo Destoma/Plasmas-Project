@@ -35,14 +35,9 @@ In the wire-loop demonstration, the external B-field was modeled by numerically 
 Another of my future goals with this project is to implement an arbitrary external B-field inclusion method that is low-effort on the user's end.
 
 
-## PyPIC3D Simulation Tool
+# PyPIC3D Simulation Tool
 
 PyPIC3D IS NOT MY WORK. Please go to https://github.com/uwplasma/PyPIC3D for the official public commit of this tool. Its README is included here for convenience, as a large portion of this project is done with its functionality.
-
-
-<div align="center">
-  <img src="docs/images/PyPICLogo.png" alt="PyPIC3D Logo" width="400">
-</div>
 
 ## PyPIC3D
 
