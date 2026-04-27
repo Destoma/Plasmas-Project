@@ -16,6 +16,8 @@ Be very careful not to install PyPIC3D via any automatic means, or else things w
 
 To run a simulation, go into the `demos` folder and pick a demonstration. In each folder you'll find a `.toml` file, which are this tool's config files. Their contents are somewhat self-explanatory, and their parameters can be adjusted freely to configure your simulation.
 
+# External B-field Implementation
+
 It is possible but rather involved to configure an external B-field for your simulation, and doing so is crucial to any demonstration of diamagnetic behavior. All demos with an external B-field (all of them except for `two-stream`) have a region at the bottom of their config (`toml`) file dedicated to them. Here you can add dedicated NumPy filenames whose corresponding files must contain a component of the field as a 3-layer matrix `B_component[x_index][y_index][z_index]`.
 
 Due to the roughness of creating such a representation of the external B-field, each demo with one of them has a Python file dedicated to the creation of their NumPy arrays. So far, I haven't made a methodical way to do this.
