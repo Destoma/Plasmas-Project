@@ -18,7 +18,11 @@ To find a simulation, go into the `demos` folder and pick a demonstration. In ea
 
 To run this simulation, simply enter `PyPIC3D --config demos/DEMONAME/DEMONAME.toml` into the console.
 
-The results chosen to be returned from the simulation (via the `[plotting_parameters]` section of the config file) will be sent to a `data/data` directory in the project, whether one already exists or not. To view the results, run the `particle_analysis.py` and `field_analysis.py` programs. Both take a while to execute, and the plot axis limits must be adjusted manually (for now). The `particle_analysis` axis limits in particular must be centered at the origin, as this is the way particle positions are implemented in PyPIC3D.
+The results chosen to be returned from the simulation (via the `[plotting_parameters]` section of the config file) will be sent to a `data/data` directory in the project, whether one already exists or not. To view the results, run the `particle_analysis.py` and `field_analysis.py` programs. Both take a while to execute, and the plot axis limits must be adjusted manually (for now). 
+
+The `particle_analysis` axis limits in particular must be centered at the origin, as this is the way particle positions are implemented in PyPIC3D.
+
+Feel free to adjust the parameters for plotting in `field_analysis`. The provided method of field-viewing is very hands-on, since the preferred view depends heavily on the experiment. Of course, this could be much better implemented, and doing this is currently a future goal.
 
 ## External B-field Implementation
 
@@ -28,7 +32,7 @@ Due to the roughness of creating such a representation of the external B-field, 
 
 In the wire-loop demonstration, the external B-field was modeled by numerically calculating the Biot-Savart integral on a mesh of points with the same grid shape as that of the PyPIC3D fields (stated as (Nx, Ny, Nz in the config files).
 
-One of my future goals with this project is to implement a low-effort arbitrary external B-field inclusion method.
+Another of my future goals with this project is to implement a low-effort arbitrary external B-field inclusion method.
 
 
 ## PyPIC3D Simulation Tool
