@@ -1,4 +1,31 @@
-PyPIC3D IS NOT MY WORK. See https://github.com/uwplasma/PyPIC3D for the official commit of this phenomenal tool. Its README is included here for convenience, as a large portion of this project is done with its functionality.
+## Plasma Diamagnetism Model
+
+From first principles with only a few charged particles, the diamagnetism of a system of mobile charges makes its presence seem obvious via Lenz's law.
+
+In the case of many-particle interactions, the phenomenon known as diamagnetism becomes much less rigidly defined, shifting to more of a lens from which to analyze a system.
+
+This project was made to provide a structure accommodating the study of diamagnetism without the use of plasma fluid models or kinetic theory.
+
+## Disclaimer
+
+This project is currently just a PyCharm project uploaded to Github, and must stay that way for now. PyPIC3D's official PyPi release is nonfunctional, and part of the convenience of this project is its manual inclusion into PyCharm. Be careful not to install PyPIC3D via any automatic means.
+
+## How to Use
+
+To run a simulation, go into the `demos` folder and pick a demonstration. In each folder you'll find a `.toml` file, which are this tool's config files. Their contents are somewhat self-explanatory, and their parameters can be adjusted freely to configure your simulation.
+
+It is possible but rather involved to configure an external B-field for your simulation, and doing so is crucial to any demonstration of diamagnetic behavior. All demos with an external B-field (all of them except for `two-stream`) have a region at the bottom of their config (`toml`) file dedicated to them. Here you can add dedicated NumPy filenames whose corresponding files must contain a component of the field as a 3-layer matrix `B_component[x_index][y_index][z_index]`.
+
+Due to the roughness of creating such a representation of the external B-field, each demo with one of them has a Python file dedicated to the creation of their NumPy arrays. So far, I haven't made a methodical way to do this.
+
+In the wire-loop demonstration, the external B-field was modeled by numerically calculating the Biot-Savart integral on a mesh of points with the same grid shape as that of the PyPIC3D fields (stated as (Nx, Ny, Nz in the config files).
+
+One of my future goals with this project is to implement a low-effort arbitrary external B-field inclusion method.
+
+
+## PyPIC3D Simulation Tool
+
+PyPIC3D IS NOT MY WORK. Please go to https://github.com/uwplasma/PyPIC3D for the official commit of this phenomenal tool. Its README is included here for convenience, as a large portion of this project is done with its functionality.
 
 
 <div align="center">
