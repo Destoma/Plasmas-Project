@@ -10,6 +10,8 @@ This project was made to provide a structure accommodating the study of diamagne
 
 This project is currently just a PyCharm project uploaded to Github, and must stay that way for now. PyPIC3D's official PyPi release is nonfunctional, and part of the convenience of this project is its manual inclusion into PyCharm under its most recent Github commit (which is functional, of course).
 
+I apologize to my professor who's reading this (he wrote much of the PyPIC3D code) for not giving myself enough time to work on this such that I could communicate these things to him.
+
 In order for this project to work, you need to copy the directories in the folder labeled `COPY INTO YOUR venv:bin` into your project's `venv/bin` folder, and then procedurally install each of the required packages through pip as you attempt to begin simulations. Do NOT install PyPIC3D via pip, or else the pathing will break and you will have to create a new project.
 
 # How to Use
