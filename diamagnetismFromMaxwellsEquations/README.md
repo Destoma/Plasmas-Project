@@ -10,13 +10,15 @@ This project was made to provide a structure accommodating the study of diamagne
 
 This project is currently just a PyCharm project uploaded to Github, and must stay that way for now. PyPIC3D's official PyPi release is nonfunctional, and part of the convenience of this project is its manual inclusion into PyCharm under its most recent Github commit (which is functional, of course).
 
-Be very careful not to install PyPIC3D via any automatic means, or else things will break very quickly.
+I apologize to my professor who's reading this (he wrote much of the PyPIC3D code) for not giving myself enough time to work on this such that I could communicate these things to him.
+
+In order for this project to work, you need to copy the directories in the folder labeled `COPY INTO YOUR venv:bin` into your project's `venv/bin` folder, and then procedurally install each of the required packages through pip as you attempt to begin simulations. Do NOT install PyPIC3D via pip, or else the pathing will break and you will have to create a new project.
 
 # How to Use
 
 To find a simulation, go into the `demos` folder and pick a demonstration. In each folder you'll find a `.toml` file, which are this tool's config files. Their contents are somewhat self-explanatory, and their parameters can be adjusted freely to configure your simulation.
 
-To run this simulation, simply enter `PyPIC3D --config demos/DEMONAME/DEMONAME.toml` into the console.
+To run this simulation, simply enter `python PyPIC3D --config demos/DEMONAME/CONFIGNAME.toml` into the console.
 
 The results chosen to be returned from the simulation (via the `[plotting_parameters]` section of the config file) will be sent to a `data/data` directory in the project, whether one already exists or not. To view the results, run the `particle_analysis.py` and `field_analysis.py` programs. Both take a while to execute, and the plot axis limits must be adjusted manually (for now). 
 
@@ -30,19 +32,14 @@ It is possible but rather involved to configure an external B-field for your sim
 
 Due to the roughness of creating such a representation of the external B-field, each demo with one of them has a Python file dedicated to the creation of their NumPy arrays. So far, I haven't made a methodical way to do this.
 
-In the wire-loop demonstration, the external B-field was modeled by numerically calculating the Biot-Savart integral on a mesh of points with the same grid shape as that of the PyPIC3D fields (stated as (Nx, Ny, Nz in the config files).
+In the wire-loop demonstration, the external B-field was modeled by numerically calculating the Biot-Savart integral on a mesh of points with the same grid shape as that of the PyPIC3D fields (stated as (Nx, Ny, Nz in the config files). This process was executed separately with MATLAB.
 
 Another of my future goals with this project is to implement an arbitrary external B-field inclusion method that is low-effort on the user's end.
 
 
-## PyPIC3D Simulation Tool
+# PyPIC3D Simulation Tool
 
 PyPIC3D IS NOT MY WORK. Please go to https://github.com/uwplasma/PyPIC3D for the official public commit of this tool. Its README is included here for convenience, as a large portion of this project is done with its functionality.
-
-
-<div align="center">
-  <img src="docs/images/PyPICLogo.png" alt="PyPIC3D Logo" width="400">
-</div>
 
 ## PyPIC3D
 
